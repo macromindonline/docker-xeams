@@ -17,8 +17,8 @@ WORKDIR	/opt
 RUN	wget https://www.xeams.com/files/XeamsLinux64.tar && \
 	tar -xvf XeamsLinux64.tar
 
-COPY	docker-install.sh .
-COPY	docker-run.sh .
+COPY	--chmod=700 docker-install.sh .
+COPY	--chmod=700 docker-run.sh .
 
 CMD	./docker-run.sh
 
